@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lexend+Deca|Patua+One|Red+Hat+Display&display=swap');
+
+/* font-family: 'Lexend Deca', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Patua One', cursive;
+font-family: 'Alfa Slab One', cursive; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.85em;
+    line-height: 1.2em;
+}
+
+main {
+    background-image: url(/assets/background.png);
+}
+
+h2 {
+    font-family: 'Patua One', cursive;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    margin-bottom: 5px;
+}

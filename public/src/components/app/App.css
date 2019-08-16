@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lexend+Deca|Patua+One|Red+Hat+Display&display=swap');
+
+/* font-family: 'Lexend Deca', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Patua One', cursive;
+font-family: 'Alfa Slab One', cursive; */
+
+.layout {
+    display: grid;
+    grid-area: 1fh 1fr 1fr;
+    width: 100vw;
+}
+
+.options-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #ef3d2b;
+    margin: 0;
+    padding: 10px;
+    height: 100;
+    width: 100vw;
+    grid-area: 'options';
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+input {
+    height: 25px;
+    width: 90%;
+    margin: 5px;
+}
+
+#search-button {
+    font-family: 'Red Hat Display' sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    width: 25%;
+}
+
+#search-button:hover {
+    transition: transform 100ms ease-in-out;
+    box-shadow: 2px 2px 3px darkred;
+    transform: translate3d(-1px, 1px, 0);
+}
+
+select {
+    height: 25px;
+    width: 20%;
+    margin-left: 20px;
+}
+
+.list-section {
+    padding: 20px 10px;
+    grid-area: 'list';
+}
+
+ul {
+    list-style: none;
+}
+
+li.poke-name {
+    font-family: 'Patua One', cursive;
+    font-size: 2em;
+}
+
+li.type {
+    font-family: 'Lexend Deca', sans-serif;
+}
