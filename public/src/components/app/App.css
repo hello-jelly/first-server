@@ -1,44 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lexend+Deca|Patua+One|Red+Hat+Display&display=swap');
 
-/* font-family: 'Lexend Deca', sans-serif;
-font-family: 'Red Hat Display', sans-serif;
-font-family: 'Patua One', cursive;
-font-family: 'Alfa Slab One', cursive; */
-
-.layout {
+main {
     display: grid;
-    grid-area: 1fh 1fr 1fr;
-    width: 100vw;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "options-section"
+    "list-section"
 }
 
 .options-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    grid-area: options-section;
     background: #ef3d2b;
-    margin: 0;
     padding: 10px;
-    height: 100;
-    width: 100vw;
-    grid-area: 'options';
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+.search-name {
+    padding: 5px;
+    width: 300px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+.name-input {
+    width: 250px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.85em;
 }
-input {
+
+select {
+    background-color: lightgray;
+    font-family: 'Red Hat Display' sans-serif;
+    font-weight: bold;
+    margin-right: 5px;
+    width: 90px;
     height: 25px;
-    width: 90%;
-    margin: 5px;
+}
+
+.filter-by {
+    padding: 5px;
+    width: 300px;
+}
+
+.filter-input {
+    width: 150px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.85em;
 }
 
 #search-button {
@@ -50,7 +55,7 @@ input {
     background-color: black;
     color: white;
     margin: 5px;
-    width: 25%;
+    width: 80px;
 }
 
 #search-button:hover {
@@ -59,26 +64,32 @@ input {
     transform: translate3d(-1px, 1px, 0);
 }
 
-select {
-    height: 25px;
-    width: 20%;
-    margin-left: 20px;
-}
-
 .list-section {
-    padding: 20px 10px;
-    grid-area: 'list';
+    padding: 20px;
+    grid-area: list-section;
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(/assets/background.png);
+    background-size: cover;
 }
 
 ul {
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1em;
 }
 
-li.poke-name {
-    font-family: 'Patua One', cursive;
-    font-size: 2em;
-}
-
-li.type {
-    font-family: 'Lexend Deca', sans-serif;
+@media only screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "options-section" "list-section"
+    }
+    .list-section {
+        grid-column: 1;
+        grid-row: 2;
+    }
 }
